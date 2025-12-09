@@ -1,21 +1,21 @@
 const objectId = (value, helpers) => {
   if (!value.match(/^[0-9a-fA-F]{24}$/)) {
-    return helpers.message('"{{#label}}" must be a valid mongo id');
+    return helpers.message('"{{#label}}" must be a valid mongo id')
   }
-  return value;
-};
+  return value
+}
 
 const password = (value, helpers) => {
   if (value.length < 8) {
-    return helpers.message('password must be at least 8 characters');
+    return helpers.message('password must be at least 8 characters')
   }
   if (!/\d/.test(value) || !/[a-zA-Z]/.test(value)) {
-    return helpers.message('password must contain at least 1 letter and 1 number');
+    return helpers.message('password must contain at least 1 letter and 1 number')
   }
-  return value;
-};
+  return value
+}
 
 module.exports = {
   objectId,
-  password,
-};
+  password
+}
