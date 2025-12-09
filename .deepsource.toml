@@ -9,8 +9,6 @@ enabled = true
     "nodejs"
   ]
   style_guide = "airbnb"
-  skip_doc_coverage = ["node_modules"]
-  cyclomatic_complexity_threshold = "conservative"
 
 [[analyzers]]
 name = "docker"
